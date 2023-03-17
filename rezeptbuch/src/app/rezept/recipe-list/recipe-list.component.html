@@ -5,7 +5,8 @@
     </div>
     <div class="col-xs-12">
         <ul class="list-group">
-            <app-recipe-item [recipe]="recipe"></app-recipe-item>
+    <!-- Durch den Event Emitter können die Daten des Rezept übergeben werden -->
+            <app-recipe-item [recipe]="recipe" (recipeSelected)="onSelected($event)"></app-recipe-item>
         </ul>
     </div>
 </div>
